@@ -265,7 +265,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">22/6/14虫食い算Java</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -275,7 +275,62 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">
+                                        import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        // 自分の得意な言語で
+        // Let's チャレンジ！！
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String ss = s.replace(" ","");
+        String[] str = ss.split("");
+
+
+            if(str[1].equals("+")){         //case  +
+                if(str[0].equals("x")){
+                    int a = Integer.parseInt(str[2]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = b-a;
+                    System.out.println(ans);
+                }else if(str[2].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = b-a;
+                    System.out.println(ans);
+                }else if(str[4].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[2]);
+                    int x = a+b;
+                    System.out.println(x);
+                }
+            }
+                
+                
+                
+            if(str[1].equals("-")){         //case  +
+                if(str[0].equals("x")){
+                    int a = Integer.parseInt(str[2]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = a+b;
+                    System.out.println(ans);
+                }else if(str[2].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = a-b;
+                    System.out.println(ans);
+                }else if(str[4].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[2]);
+                    int x = a-b;
+                    System.out.println(x);
+                }
+            }
+    }
+}
+                                 </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
