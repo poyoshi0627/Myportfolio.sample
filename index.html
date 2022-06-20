@@ -278,51 +278,57 @@
                                     <p class="mb-4">
                                         <p>import java.util.*;</p>
   <pre><code>
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        String ss = s.replace(" ","");
-        String[] str = ss.split("");
+/*このプログラムのボトルネックな点は文字を1文字ずつ解読しているため
+あくまで5文字のみで成り立っている。全部で6文字になると成立しないところが難あり。*/
+package 数のポートフォリオ;
 
-            if(str[1].equals("+")){         //case  +
-                if(str[0].equals("x")){</p>
-                    int a = Integer.parseInt(str[2]);
-                    int b = Integer.parseInt(str[4]);
-                    int ans = b-a;
-                    System.out.println(ans);
-                }else if(str[2].equals("x")){
-                    int a = Integer.parseInt(str[0]);
-                    int b = Integer.parseInt(str[4]);
-                    int ans = b-a;
-                    System.out.println(ans);
-                }else if(str[4].equals("x")){
-                    int a = Integer.parseInt(str[0]);
-                    int b = Integer.parseInt(str[2]);
-                    int x = a+b;
-                    System.out.println(x);
-                }
-            }
-                
-            if(str[1].equals("-")){         //case  -
-                if(str[0].equals("x")){
-                    int a = Integer.parseInt(str[2]);
-                    int b = Integer.parseInt(str[4]);
-                    int ans = a+b;
-                    System.out.println(ans);
-                }else if(str[2].equals("x")){
-                    int a = Integer.parseInt(str[0]);
-                    int b = Integer.parseInt(str[4]);
-                    int ans = a-b;
-                    System.out.println(ans);
-                }else if(str[4].equals("x")){
-                    int a = Integer.parseInt(str[0]);
-                    int b = Integer.parseInt(str[2]);
-                    int x = a-b;
-                    System.out.println(x);
-                }
-            }
-    }
+public class Mushikuizan {
+	    public static void main(String[] args) {
+	    	//虫食い算：
+	    	System.out.println("a　+　b　=　c　の5文字の中の(a,b,c)のいずれか好きな文字の一箇所をxと入力し,");
+	    	System.out.println("他の場所を任意の数字で埋める。xの答えを導き出す。");
+	        String s = new java.util.Scanner(System.in).nextLine();
+	        String ss = s.replace(" ","");
+	        String[] str = ss.split("");
+	        
+	            if(str[1].equals("+")){         //case  +
+	                if(str[0].equals("x")){
+	                    int a = Integer.parseInt(str[2]);
+	                    int b = Integer.parseInt(str[4]);
+	                    int ans = b-a;
+	                    System.out.println("x = "+ans);
+	                }else if(str[2].equals("x")){
+	                    int a = Integer.parseInt(str[0]);
+	                    int b = Integer.parseInt(str[4]);
+	                    int ans = b-a;
+	                    System.out.println("x = "+ans);
+	                }else if(str[4].equals("x")){
+	                    int a = Integer.parseInt(str[0]);
+	                    int b = Integer.parseInt(str[2]);
+	                    int ans = a+b;
+	                    System.out.println("x = "+ans);
+	                }
+	            }
+	                
+	            if(str[1].equals("-")){         //case  -
+	                if(str[0].equals("x")){
+	                    int a = Integer.parseInt(str[2]);
+	                    int b = Integer.parseInt(str[4]);
+	                    int ans = a+b;
+	                    System.out.println("x = "+ans);
+	                }else if(str[2].equals("x")){
+	                    int a = Integer.parseInt(str[0]);
+	                    int b = Integer.parseInt(str[4]);
+	                    int ans = a-b;
+	                    System.out.println("x = "+ans);
+	                }else if(str[4].equals("x")){
+	                    int a = Integer.parseInt(str[0]);
+	                    int b = Integer.parseInt(str[2]);
+	                    int ans = a-b;
+	                    System.out.println("x = "+ans); 
+	            }
+	    }
+	}
 }
     </code></pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
