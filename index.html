@@ -278,59 +278,53 @@
                                     <p class="mb-4">
                                         <p>import java.util.*;</p>
   <pre><code>
-<p>public class Main {</p>
-    <p>public static void main(String[] args) {</p>
-        <p>// 自分の得意な言語で</p>
-        <p>// Let's チャレンジ！！</p>
-        <p>Scanner sc = new Scanner(System.in);</p>
-        <p>String s = sc.nextLine();</p>
-        <p>String ss = s.replace(" ","");</p>
-        <p>String[] str = ss.split("");</p>
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String ss = s.replace(" ","");
+        String[] str = ss.split("");
 
-
-            <p>if(str[1].equals("+")){         //case  +</p>
-                <p>if(str[0].equals("x")){</p>
-                    <p>int a = Integer.parseInt(str[2]);</p>
-                    <p>int b = Integer.parseInt(str[4]);</p>
-                    <p>int ans = b-a;</p>
-                    <p>System.out.println(ans);</p>
-                <p>}else if(str[2].equals("x")){</p>
-                    <p>int a = Integer.parseInt(str[0]);</p>
-                    <p>int b = Integer.parseInt(str[4]);</p>
-                    <p>int ans = b-a;</p>
-                    <p>System.out.println(ans);</p>
-                <p>}else if(str[4].equals("x")){</p>
-                    <p>int a = Integer.parseInt(str[0]);</p>
-                    <p>int b = Integer.parseInt(str[2]);</p>
-                    <p>int x = a+b;</p>
-                    <p>System.out.println(x);</p>
-                <p>}</p>
-            <p>}</p>
+            if(str[1].equals("+")){         //case  +
+                if(str[0].equals("x")){</p>
+                    int a = Integer.parseInt(str[2]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = b-a;
+                    System.out.println(ans);
+                }else if(str[2].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = b-a;
+                    System.out.println(ans);
+                }else if(str[4].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[2]);
+                    int x = a+b;
+                    System.out.println(x);
+                }
+            }
                 
-                
-                
-            <p>if(str[1].equals("-")){         //case  +</p>
-                <p>if(str[0].equals("x")){</p>
-                    <p>int a = Integer.parseInt(str[2]);</p>
-                    <p>int b = Integer.parseInt(str[4]);</p>
-                    <p>int ans = a+b;</p>
-                    <p>System.out.println(ans);</p>
-                <p>}else if(str[2].equals("x")){</p>
-                    <p>int a = Integer.parseInt(str[0]);</p>
-                    <p>int b = Integer.parseInt(str[4]);</p>
-                    <p>int ans = a-b;</p>
-                    <p>System.out.println(ans);</p>
-                <p>}else if(str[4].equals("x")){</p>
-                    <p>int a = Integer.parseInt(str[0]);</p>
-                    <p>int b = Integer.parseInt(str[2]);</p>
-                    <p>int x = a-b;</p>
-                    <p>System.out.println(x);</p>
-                <p>}</p>
-            <p>}</p>
-    <p>}</p>
-<p>}
+            if(str[1].equals("-")){         //case  -
+                if(str[0].equals("x")){
+                    int a = Integer.parseInt(str[2]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = a+b;
+                    System.out.println(ans);
+                }else if(str[2].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[4]);
+                    int ans = a-b;
+                    System.out.println(ans);
+                }else if(str[4].equals("x")){
+                    int a = Integer.parseInt(str[0]);
+                    int b = Integer.parseInt(str[2]);
+                    int x = a-b;
+                    System.out.println(x);
+                }
+            }
+    }
+}
     </code></pre>
-                                 </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
